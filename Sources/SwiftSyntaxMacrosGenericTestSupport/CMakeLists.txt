@@ -6,12 +6,15 @@
 # See http://swift.org/LICENSE.txt for license information
 # See http://swift.org/CONTRIBUTORS.txt for Swift project authors
 
-add_swift_syntax_library(SwiftSyntaxMacrosTestSupport
+add_swift_syntax_library(SwiftSyntaxMacrosGenericTestSupport
   Assertions.swift
 )
 
-target_link_swift_syntax_libraries(SwiftSyntaxMacrosTestSupport PUBLIC
-  SwiftSyntax
+target_link_swift_syntax_libraries(SwiftSyntaxMacrosGenericTestSupport PUBLIC
+  _SwiftSyntaxGenericTestSupport
+  SwiftBasicFormat
+  SwiftDiagnostics
+  SwiftIDEUtils
+  SwiftParserDiagnostics
   SwiftSyntaxMacroExpansion
-  SwiftSyntaxMacrosGenericTestSupport
 )
