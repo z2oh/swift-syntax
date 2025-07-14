@@ -191,7 +191,7 @@ function(add_swift_syntax_library name)
 
     # Install the module files.
     install(
-      DIRECTORY ${module_base}
+      DIRECTORY "${module_base}/"
       DESTINATION lib/${SWIFT_HOST_LIBRARIES_SUBDIRECTORY}
       FILES_MATCHING PATTERN "*.swiftinterface"
     )
